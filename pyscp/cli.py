@@ -11,7 +11,7 @@ def get_remote_server_address(server):
 
 def get_remote_server_path(server):
     if server == "swan":
-        return "/work/yesselmanlab/jyesselm"
+        return "/lustre/work/yesselmanlab/jyesselm"
     else:
         raise ValueError("Server not recognized")
 
