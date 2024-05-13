@@ -33,7 +33,9 @@ def cli(server, path_1, path_2):
         local_path, remote_path = path_1, path_2
     if remote_path.startswith("~/"):
         remote_path = remote_path[2:]
-    if not remote_path.startswith(server_path):
+    if not remote_path.startswith(server_path) and not remote_path.startswith(
+        "/work/yesselmanlab/jyesselm/"
+    ):
         remote_path = server_path + "/" + remote_path
     if local_path == "":
         os.system(f"scp -r {server_address}:{remote_path} .")
